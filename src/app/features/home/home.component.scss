@@ -1,0 +1,29 @@
+@import "~styles/_variables";
+
+.ads {
+  margin: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  .add {
+    width: 25%;
+    margin: 10px 10px 10px 10px;
+    min-height: 200px;
+    padding: 15px;
+    box-shadow: 1px 1px 1px 1px $lightBlue;
+
+    &__title {
+      text-align: center;
+      margin: 0;
+    }
+
+    &__desc {
+      font-style: italic;
+    }
+
+    &__author {
+      margin: 10px 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "~styles/_variables";
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(145deg, $darkBlue, $lightBlue);
+  color: $white;
+
+  h2 {
+    margin-left: 10em;
+    cursor: pointer;
+  }
+}

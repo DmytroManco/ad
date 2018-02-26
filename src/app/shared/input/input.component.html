@@ -1,0 +1,11 @@
+<input [type]="inputType"
+       [(ngModel)]="inputValue"
+       (input)="inputHandler()"
+       (blur)="blurHandler()"
+       [name]="inputName"
+       [placeholder]="inputPlaceholder"
+       [className]="inputClass"
+       [required]="isRequired"
+       [min]="minVal"
+       [max]="maxVal"
+       [maxlength]="maxLength">

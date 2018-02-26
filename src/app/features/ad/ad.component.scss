@@ -1,0 +1,22 @@
+@import "~styles/_variables";
+
+.add {
+  width: 500px;
+  padding: 15px;
+  margin: 5rem auto;
+  min-height: 200px;
+  box-shadow: 1px 1px 1px 1px $lightBlue;
+
+  &__title {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__desc {
+    font-style: italic;
+  }
+
+  &__author {
+    margin: 10px 0;
+  }
+}

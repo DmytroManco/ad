@@ -1,0 +1,20 @@
+<h3 class="add__title">Add new Ad</h3>
+
+<div class="add-form">
+  <form [formGroup]="addForm"
+        (submit)="submitForm(addForm.value)">
+    <strong>Title:</strong> <br>
+    <app-input [inputClass]="'add-input'"
+               formControlName="title">
+    </app-input>
+    <br>
+    <strong>Description:</strong> <br>
+    <textarea class="add-text"
+              formControlName="description">
+  </textarea> <br>
+    <app-button [className]="'add-btn'"
+                [disabled]="addForm.invalid">
+      Add
+    </app-button>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+.add__title {
+  margin: 5em 0 30px;
+  text-align: center;
+}
+
+.add-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  app-input, textarea {
+    margin: 10px 0;
+  }
+
+  .add-btn {
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+  }
+}
+
+.add-input {
+  margin: 10px 0 !important;
+}

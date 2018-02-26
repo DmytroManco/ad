@@ -1,0 +1,23 @@
+<h3>Log In</h3>
+
+<form *ngIf="!user" [formGroup]="loginForm"
+      (submit)="login(loginForm.value)">
+
+  Name:
+  <app-input [inputPlaceholder]="'name'"
+             formControlName="name"
+             [inputValue]="loginForm['controls']['name'].value">
+  </app-input>
+  Password:
+  <app-input [inputType]="'password'"
+             [inputPlaceholder]="'password'"
+             formControlName="password"
+             [inputValue]="loginForm['controls']['password'].value">
+  </app-input>
+
+  <app-button [disabled]="loginForm.invalid">Log In</app-button>
+</form>
+<div class="logout" *ngIf="user">
+  <h5>{{user.name}}</h5>
+  <span (click)="logout()">Logout</span>
+</div>
