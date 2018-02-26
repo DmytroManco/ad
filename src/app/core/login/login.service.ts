@@ -24,6 +24,8 @@ export class LoginService {
 
   public addNewUser(user: User): void {
     this.users.push(user);
+    this.user = user;
+    this.subject.next(user);
     this.setUsers(this.users);
   }
 

@@ -6,7 +6,7 @@
 
 <div class="ads">
   <div class="add" *ngFor="let ad of ads | paginate: {itemsPerPage: 5, currentPage: page}">
-    <h4 class="add__title">{{ad.title}}</h4>
+    <h4 class="add__title" (click)="navigateToView(ad.id)">{{ad.title}}</h4>
     <p class="add__desc">{{ad.description}}</p>
     <div class="add__author"><strong>Author: </strong>{{ad.authorName}}</div>
     <div class="add__date"><strong>Created at: </strong>{{ad.createdAt}}</div>

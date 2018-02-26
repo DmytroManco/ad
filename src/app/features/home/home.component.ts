@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Ad, AdService } from '../services';
 import { LoginService, User } from '../../core/login';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import { Subscription } from 'rxjs/Subscription';
 import { Router } from '@angular/router';
@@ -35,6 +34,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public navigateToAdd(): void {
     this.router.navigate(['add']);
+  }
+
+  public navigateToView(id: number): void {
+
+    this.router.navigate([`${id}`]);
   }
 
   public deleteAdd(id: number): void {

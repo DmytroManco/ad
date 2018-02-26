@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ad, AdService } from '../services';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { Subscription } from 'rxjs/Subscription';
+import { ActivatedRoute,  Router } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -11,9 +10,6 @@ import 'rxjs/add/operator/switchMap';
 })
 export class AdComponent implements OnInit {
   public ad: Ad;
-  public adId: number;
-
-  private subscriptions: Subscription[];
 
   constructor(private adService: AdService,
               private route: ActivatedRoute,
@@ -22,7 +18,6 @@ export class AdComponent implements OnInit {
 
   public ngOnInit() {
     this.getAd(Number(this.route.snapshot.params['id']));
-    console.log(this.ad);
   }
 
   private getAd(id: number) {

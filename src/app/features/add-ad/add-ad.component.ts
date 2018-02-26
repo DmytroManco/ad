@@ -1,8 +1,7 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Ad, AdService } from '../services';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoginService, User } from '../../core/login';
-import { Subscription } from 'rxjs/Subscription';
+import { LoginService } from '../../core/login';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,7 +21,6 @@ export class AddAdComponent implements OnInit {
 
   public ngOnInit() {
     this.addForm = this.initForm();
-    console.log(this.loginService.getUserName());
   }
 
   public submitForm(formValue): void {
