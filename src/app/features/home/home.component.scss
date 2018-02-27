@@ -1,5 +1,9 @@
 @import "~styles/_variables";
 
+.login-section {
+  margin: 5em 10px 30px;
+}
+
 .ads {
   margin: 20px 0;
   display: flex;
@@ -16,6 +20,10 @@
     &__title {
       text-align: center;
       margin: 0;
+
+      span {
+        cursor: pointer;
+      }
     }
 
     &__desc {
@@ -26,4 +34,16 @@
       margin: 10px 0;
     }
   }
+}
+
+.delete-btn, .navigate-btn {
+  margin: 10px 0;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.delete-btn {
+  background-color: $red;
+  border: 1px solid $red;
+  color: $white;
 }

@@ -1,17 +1,23 @@
 
-<h1>Home</h1>
-<app-login-form></app-login-form>
-
-<app-button *ngIf="user" (onclickHandler)="navigateToAdd()">Add New Ad</app-button>
+<div class="login-section">
+  <app-login-form></app-login-form>
+  <app-button *ngIf="user" [className]="'navigate-btn'"
+              (onclickHandler)="navigateToAdd()">
+    Add New Ad
+  </app-button>
+</div>
 
 <div class="ads">
   <div class="add" *ngFor="let ad of ads | paginate: {itemsPerPage: 5, currentPage: page}">
-    <h4 class="add__title" (click)="navigateToView(ad.id)">{{ad.title}}</h4>
+    <h4 class="add__title" (click)="navigateToView(ad.id)">
+      <span>{{ad.title}}</span>
+    </h4>
     <p class="add__desc">{{ad.description}}</p>
     <div class="add__author"><strong>Author: </strong>{{ad.authorName}}</div>
     <div class="add__date"><strong>Created at: </strong>{{ad.createdAt}}</div>
 
     <app-button *ngIf="user?.name === ad.authorName"
+                [className]="'delete-btn'"
                 (onclickHandler)="deleteAdd(ad.id)">
       Delete Add
     </app-button>

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Ad, AdService } from '../services';
 import { LoginService, User } from '../../core/login';
 import 'rxjs/add/observable/of';
@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit, OnDestroy {
   public ads: Ad[];

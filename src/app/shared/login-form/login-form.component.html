@@ -18,6 +18,6 @@
   <app-button [disabled]="loginForm.invalid">Log In</app-button>
 </form>
 <div class="logout" *ngIf="user">
-  <h5>{{user.name}}</h5>
-  <span (click)="logout()">Logout</span>
+  <span><strong>UserName: </strong>{{user.name}}</span> /
+  <span class="logout__btn" (click)="logout()">Logout</span>
 </div>

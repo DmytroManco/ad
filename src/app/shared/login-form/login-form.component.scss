@@ -1,0 +1,9 @@
+@import "~styles/_variables";
+
+.logout__btn {
+  cursor: pointer;
+
+  &:hover {
+    color: $lightBlue;
+  }
+}
