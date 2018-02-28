@@ -38,6 +38,13 @@ export class AdService {
     this.setAds(this.ads);
   }
 
+  public editAd(editedAd: Ad) {
+    let index = editedAd.id - 1;
+
+    this.ads[index] = editedAd;
+    this.setAds(this.ads);
+  }
+
   private initializeAds(amount: number): void {
     for (let i = 1; i < amount; i++) {
       this.ads.push(this.makeAd(i, `Add-${i}`, `Example Add ${i}`, 'Test'));

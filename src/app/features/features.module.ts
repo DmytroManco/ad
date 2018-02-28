@@ -3,17 +3,20 @@ import { HomeModule } from './home';
 import { AdService } from './services';
 import { AdModule } from './ad';
 import { AddAdModule } from './add-ad';
+import { EditAdModule } from './edit-ad';
 
 @NgModule({
   imports: [
     HomeModule,
     AdModule,
-    AddAdModule
+    AddAdModule,
+    EditAdModule
   ],
   exports: [
     HomeModule,
     AdModule,
-    AddAdModule
+    AddAdModule,
+    EditAdModule
   ],
   providers: [AdService]
 })
